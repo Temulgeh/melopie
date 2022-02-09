@@ -13,13 +13,21 @@ Chaque scène aura son propre dossier dans la racine, nommé éponymement, avec 
 - constantes (y compris dans les enums): UPPER_SNAKE_CASE
 - Nodes et Scènes: PascalCase
 
+Le nom des différents éléments doit être en anglais, et décrire rapidement son utilité, avec chaque élément nommé de manière différente:
+
+- variables booléennes: un verbe d'état + un adjectif (exemples: `is_active`, `has_been_activated`)
+- autres variables: un nom (exemples: `speed`, `position`, `size`)
+- fonctions: un verbe d'action (exemple: `move`, `rotate`) ou un verbe d'action + un nom (exemples: `update_position`, `play_animation`)
+- fonction d'évenement: `_on_<evenement>` (exemple: `_on_Button_pressed`)
+
 ## Typage
 
 A part si absolument nécessaire, le typage doit être fait, soit implicitement, via l'opérateur `:=`, soit explicitement, de la façon `nom_var: type` pour les variables. Pour les fonctions, le typage doit être explicite: `func ma_fonction(param: type) -> type:`.
 
 ## Commentaires
 
-Les commentaires débutent par `#`. Après le `#`, on suivra d'un espace avant d'écrire le commentaire, qui devra être, le plus possible, clair et concis
+Les commentaires débutent par `#`. Après le `#`, on suivra d'un espace avant d'écrire le commentaire, qui devra être, le plus possible, clair et concis\
+Ils sont, en règle générale, à proscrire, puisqu'il faut privilégier un code lisible en lui même
 
 ## Formattage du code
 
@@ -36,8 +44,24 @@ Retours à la ligne:
 - 2 entre chaque parties de codes (après une fonction, après la déclaration de variables similaires...)
 - Entre chaque élément d'une structure groupée (liste, dictionnaire...) après la virgule, si elle est trop longue
 - Entre chaque élement d'un enum
+- Dans une fonction pour grouper des actions similaires
 - Ne pas hésiter à les utiliser pour aérer le code et le rendre plus lisible
--
+
+## Structure du code
+
+Le code doit être structuré de la façon suivante:
+
+1. Déclaration des signaux
+2. Déclaration des variables modifiables depuis l'éditeur (variables export)
+3. Déclaration des classes (si absolument nécessaire)
+4. Déclaration des enums
+5. Déclaration des constantes
+6. Déclaration des variables `onready`
+7. Déclaration des variables globales au fichier
+8. Déclaration des fonctions qui réagissent à un évenement hors signal
+9. Déclaration des fonctions appelées automatiquement
+10. Déclaration des fonctions réagissant à un signal
+11. Déclaration des fonctions locales
 
 ## Exemple de code
 
@@ -48,10 +72,10 @@ extends Node2D
 signal mon_signal(param: int)
 
 
-export var coucou_modifie_moi_uwu: NodePath
+export var variable_modifiable: NodePath
 
 
-# Ne faites pas de classes mais si vous en faites nommez les en PascalCase et mettez les ici
+# Ne faites pas de classes mais si vous en faites mettez les ici
 
 
 enum MonEnum {
@@ -63,7 +87,7 @@ enum MonEnum {
 const CONSTANTE: int = 5
 const AUTRE_CONSTANTE: int = c_constante * 2
 
-const c_autre_constante_qui_a_rien_a_voir: float = 50.2
+const AUTRE_CONSTANTE_QUI_A_RIEN_A_VOIR: float = 50.2
 
 
 onready var animation_player := $AnimationPlayer
@@ -72,16 +96,16 @@ var variable_membre: Vector2
 
 
 # Les fonctions qui réagissent à un évènement extérieur (sauf connectées par signal)
-func _input(event):
+func _input(event: type_event) -> void:
     pass
 
 
 # Les fonctions appelées même sans entrée utilisateur
-func _ready():
+func _ready() -> void:
     pass
 
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
     je_fais_quelque_chose()
     quelque_chose_d_autre()
 
@@ -90,11 +114,11 @@ func _physics_process(delta):
 
 
 # Les fonctions connectées par signal
-func ce_moment_quand_collision_oh_non(ennemi):
+func _on_ennemy_collision(ennemy: Ennemy) -> void:
     pass
 
 
 # Les fonctions locales
-func attaquer():
+func attaquer() -> void:
     pass
 ```
