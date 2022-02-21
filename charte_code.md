@@ -4,7 +4,7 @@ Voici une charte afin d'avoir un style et un structure de code communs à tous, 
 
 ## Scènes
 
-Chaque scène aura son propre dossier dans la racine, nommé éponymement, avec les éléments associés à l'intérieur (assets, scripts, sous-scènes...)\
+Chaque scène aura son propre dossier dans la racine, nommé éponymement, avec les éléments associés à l'intérieur (assets, scripts, sous-scènes...)
 
 ## Convention de nommage
 
@@ -63,6 +63,9 @@ Le code doit être structuré de la façon suivante:
 10. Déclaration des fonctions réagissant à un signal
 11. Déclaration des fonctions locales
 
+## Divers
+Le code doit être lisible et donc ne doit pas trop être indenté. Il convient donc d'éviter de mettre des elses et des ifs imbriqués (sans nécessairement les bannir non plus), et privilégier les [guard clause](https://youtu.be/EumXak7TyQ0)\
+ON PEUT METTRE DES RETURN DANS DES BOUCLE `for`, C'EST PLUS LISIBLE ET PERMET DE FAIRE MOINS D'ERREUR QUE SON EQUIVALENT EN `while`
 ## Exemple de code
 
 ```
