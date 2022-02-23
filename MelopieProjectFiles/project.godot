@@ -20,6 +20,7 @@ window/size/width=480
 window/size/height=270
 window/size/test_width=1280
 window/size/test_height=720
+window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -54,6 +55,7 @@ jump={
 [layer_names]
 
 2d_physics/layer_1="Player"
+2d_physics/layer_2="WindPushed"
 2d_physics/layer_4="Terrain"
 2d_physics/layer_9="CameraBorders"
 
