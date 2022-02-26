@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=19 format=2]
+=======
+[gd_scene load_steps=8 format=2]
+>>>>>>> 710ad75cf7b53bb50249e2e1f5c059e13899f424
 
 [ext_resource path="res://Actors/Player/Sprites/mel_0000.png" type="Texture" id=1]
 [ext_resource path="res://Actors/Player/Player.gd" type="Script" id=2]
@@ -29,6 +33,7 @@ shader = SubResource( 2 )
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 5 )
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=7]
 resource_name = "Flap"
 length = 0.34
@@ -191,6 +196,13 @@ tracks/0/keys = {
 "update": 1,
 "values": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ) ]
 }
+=======
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4.375, 3.03125 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 4.375, 2 )
+>>>>>>> 710ad75cf7b53bb50249e2e1f5c059e13899f424
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 2, 2 )
@@ -215,9 +227,23 @@ visible = false
 position = Vector2( 0.5, 0 )
 shape = SubResource( 1 )
 
+<<<<<<< HEAD
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Flap = SubResource( 7 )
 anims/Idle = SubResource( 4 )
 anims/Jump = SubResource( 8 )
 anims/RESET = SubResource( 5 )
 anims/Run = SubResource( 6 )
+=======
+[node name="Forward peck" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forward peck"]
+position = Vector2( 8.875, -1.96875 )
+shape = SubResource( 4 )
+
+[node name="Downward peck" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Downward peck"]
+position = Vector2( 8.875, 3 )
+shape = SubResource( 5 )
+>>>>>>> 710ad75cf7b53bb50249e2e1f5c059e13899f424
