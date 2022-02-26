@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/mel_0005.png-9fad55af2f7ecac6f022c460f7436611.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://Actors/Player/Sprites/mel_0005.png"
+dest_files=[ "res://.import/mel_0005.png-9fad55af2f7ecac6f022c460f7436611.stex" ]
 
 [params]
 
