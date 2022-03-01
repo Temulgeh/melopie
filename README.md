@@ -109,6 +109,7 @@ Dream Team:
   
 - Personnages : 
     -  Nau 
+    <!-- TODO: Réecrire dépression -->
         - Encore assez jeune, la trentaine 
         - En dépression
         - Non-binaire
@@ -168,7 +169,6 @@ Dream Team:
     - Ennuyée que Nau vient de partir, après s'être levé sans avoir touché une seule fois aux feuilles sur lesquels il est censé écrire ses compositions. 
     - Elle commence tout de suite à essayer de trouver un moyen de sortir, à la quête d'objets brillants. 
 
-  
 
 - Elément 
 
@@ -180,6 +180,34 @@ Dream Team:
 ## Niveaux
 
 - Fiches de niveaux
+4 salles:
+    1. Chambre: Tuto
+    - Enigmes
+      1. Ouvrir sa cage: Picorer la serrure
+      2. Livres/tas de feuilles pour familiariser directions + saut
+      3. Meubles (chaises, commodes...) pour double saut
+      4. Meubles éloignés pour planer (autour de tapis)
+    - Objectifs:
+      - Se familiariser avec les mouvements
+      - Découvrir les bases du Lore
+      - Rejoindre la salle de musique
+    -Easter eggs:
+        - Coussin dans la cage à picorer
+
+    1. Salle de musique: Hub + petit bout de niveau (avant cuisine + après grenier)
+    - Objectifs:
+        - Débloquer l'intégralité de la salle
+        - Développer le lore (difficultés d'écriture etc)
+    1. Cuisine: Niveau "bordélique"
+
+    1. Jardin: Niveau "calme" + "feel good"
+
+    - hamac
+    - Trou de taupe
+    1. Grenier: Niveau "lore" + difficile
+
+    1. Niveau final: crédits + satisfaisant
+
 
 ## Planification
 
