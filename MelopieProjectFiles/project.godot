@@ -14,6 +14,10 @@ config/name="Movement Prototype"
 run/main_scene="res://Levels/TestLevel.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+LevelChange="*res://MetaElements/LevelChange/LevelChange.tscn"
+
 [display]
 
 window/size/width=480
