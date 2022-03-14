@@ -191,22 +191,59 @@ Dream Team:
       - Se familiariser avec les mouvements
       - Découvrir les bases du Lore
       - Rejoindre la salle de musique
-    -Easter eggs:
+    - Easter eggs:
         - Coussin dans la cage à picorer
 
-    1. Salle de musique: Hub + petit bout de niveau (avant cuisine + après grenier)
+    2. Salle de musique: Hub + petit bout de niveau (avant cuisine + après grenier)
     - Objectifs:
         - Débloquer l'intégralité de la salle
         - Développer le lore (difficultés d'écriture etc)
-    1. Cuisine: Niveau "bordélique"
+    - Niveau en plusieurs parties, chaque partie débloquée reprend les mécaniques du niveau précédent.
 
-    1. Jardin: Niveau "calme" + "feel good"
 
-    - hamac
-    - Trou de taupe
-    1. Grenier: Niveau "lore" + difficile
+    3. Cuisine: Niveau "bordélique"
+    - Objectifs:
+        - Avancer dans l'histoire
+        - Niveau bordélique, dynamique, avec certains moments compliqués
+    - Mécaniques:
+        - Glissades avec savon
+        - Piques: couverts, feu allumé
+        - Au dessus de feu: courant d'air chaud
+    - Easter eggs:
+        - Picore poeles: bruit métallique
+        - Salles cachées (bouche d'aération, placards, trous de souris, $\ldots$)
 
-    1. Niveau final: crédits + satisfaisant
+    4. Jardin: Niveau "calme" + "feel good"
+    - Objectifs:
+        - Avancer dans l'histoire
+        - Niveau calme, tranquille, pas d'énigmes vraiment complexes
+    - Mécaniques:
+        - Glissades avec eau de fontaine
+        - Jets d'eau: propulse
+        - hamac: rebondit
+        - Trou de taupe: parties de niveau souterraines
+        - Chat qui poursuit?
+    - Easter eggs:
+        - Salles cachées (trou de taupes, $\ldots$)
+
+    5. Grenier: Niveau "lore" + difficile
+    - Objectifs:
+        - Avancer dans l'histoire
+        - LOOOOOOOOOOOOOOOOOOOOOOOORE
+    - Mécaniques:
+        - Objet qui basculent (meubles, boites mal rangées, etc)
+        - Obstacles au plafond (chandeliers, poutres, etc)
+        - Fin de niveau: meubles en dominos, force à avancer rapidement
+        - Piques (cf niveau hôtel) (pas des araignées)
+        - Lettres: Début du niveau, boite qui bascule et disperse les lettres dans le grenier
+    - Easter eggs:
+        - Salles cachées (plein)
+
+    6. Niveau final: crédits + satisfaisant
+    - Mécaniques:
+        - Notes de musiques flottantes: boost
+        - Vent (instruments à vent...)
+        - Mécaniques des niveaux précédents
 
 
 ## Planification
