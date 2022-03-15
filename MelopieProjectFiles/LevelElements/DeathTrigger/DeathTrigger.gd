@@ -8,4 +8,4 @@ func _ready():
 
 
 func on_body_entered(body: Node2D):
-	
+	Respawn.respawn()

@@ -17,8 +17,9 @@ config/icon="res://icon.png"
 [autoload]
 
 LevelChange="*res://MetaElements/LevelChange/LevelChange.tscn"
-PauseMenu="*res://MetaElements/PauseMenu/PauseMenu.tscn"
-Global="*res://Globals/Global.tscn"
+PauseMenu="*res://MetaElements/PauseMenu/PauseMenu.gd"
+Global="*res://Globals/Global.gd"
+Respawn="*res://MetaElements/Respawn/Respawn.gd"
 
 [display]
 
@@ -76,7 +77,9 @@ pause={
 2d_physics/layer_2="WindPushed"
 2d_physics/layer_3="LevelExit"
 2d_physics/layer_4="Terrain"
+2d_physics/layer_5="Checkpoints"
 2d_physics/layer_9="CameraBorders"
+2d_physics/layer_14="DeathTrigger"
 
 [physics]
 
