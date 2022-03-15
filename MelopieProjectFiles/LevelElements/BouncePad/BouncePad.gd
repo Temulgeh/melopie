@@ -8,5 +8,7 @@ func _ready():
 	connect("body_entered", self, "on_body_entered")
 	
 func on_body_entered(body: Node2D):
-	bounce(body)
+	if "velocity" in body:
+		body.velocity = bounce_direction.normalized() * bounce_strength
+		
 
