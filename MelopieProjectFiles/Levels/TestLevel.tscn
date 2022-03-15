@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=9 format=2]
-=======
 [gd_scene load_steps=8 format=2]
->>>>>>> 357108d0a30d57c1943831c0cba71c99b8a6fff1
 
 [ext_resource path="res://LevelElements/Tiles/Wood.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actors/Player/Player.tscn" type="PackedScene" id=2]
@@ -10,20 +6,15 @@
 [ext_resource path="res://MetaElements/Camera/FollowCamera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://LevelElements/Wind/Wind.tscn" type="PackedScene" id=5]
 [ext_resource path="res://LevelElements/LevelChangeTrigger/LevelChangeTrigger.tscn" type="PackedScene" id=6]
-<<<<<<< HEAD
-[ext_resource path="res://MetaElements/CheckPointTrigger/Checkpoint.tscn" type="PackedScene" id=7]
-[ext_resource path="res://LevelElements/DeathTrigger/DeathTrigger.tscn" type="PackedScene" id=8]
-=======
 [ext_resource path="res://LevelElements/BouncePad/BouncePad.tscn" type="PackedScene" id=7]
->>>>>>> 357108d0a30d57c1943831c0cba71c99b8a6fff1
 
 [node name="TestLevel" type="Node2D"]
 
 [node name="Sky" type="ColorRect" parent="."]
-margin_left = 112.0
-margin_top = -56.0
-margin_right = 1008.0
-margin_bottom = 808.0
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 864.0
+margin_bottom = 832.0
 color = Color( 0.7, 0.85, 1.15, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -45,7 +36,6 @@ script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 56, 112 )
-collision_layer = 8215
 
 [node name="FollowCamera" parent="." instance=ExtResource( 4 )]
 visible = false
@@ -63,17 +53,9 @@ acceleration = 0.1
 position = Vector2( 760, 152 )
 next_level = "res://Levels/TestLevel.tscn"
 
-<<<<<<< HEAD
-[node name="DeathTrigger" parent="." instance=ExtResource( 8 )]
-position = Vector2( 312, 288 )
-
-[node name="Checkpoint" parent="." instance=ExtResource( 7 )]
-position = Vector2( 192, 96 )
-=======
 [node name="Trampoline" parent="." instance=ExtResource( 7 )]
 position = Vector2( 452, 774 )
 rotation = -3.14159
 scale = Vector2( 5, 1 )
 bounce_strength = 10.0
 bounce_direction = Vector2( 0, -1 )
->>>>>>> 357108d0a30d57c1943831c0cba71c99b8a6fff1

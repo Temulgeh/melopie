@@ -17,8 +17,8 @@ config/icon="res://icon.png"
 [autoload]
 
 LevelChange="*res://MetaElements/LevelChange/LevelChange.tscn"
-PauseMenu="*res://MetaElements/PauseMenu/PauseMenu.gd"
-Global="*res://Globals/Global.gd"
+PauseMenu="*res://MetaElements/PauseMenu/PauseMenu.tscn"
+Global="*res://Globals/Global.tscn"
 Respawn="*res://MetaElements/Respawn/Respawn.gd"
 
 [display]
