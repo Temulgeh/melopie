@@ -192,8 +192,8 @@ Dream Team:
       - Découvrir les bases du Lore
       - Rejoindre la salle de musique
     - Easter eggs:
-        - Coussin dans la cage à picorer
-
+        - Coussin dans la cage à picorer\
+    ![Niveau 1](./levels/premJet/1chambre.png)
     2. Salle de musique: Hub + petit bout de niveau (avant cuisine + après grenier)
     - Objectifs:
         - Débloquer l'intégralité de la salle
@@ -211,7 +211,8 @@ Dream Team:
         - Au dessus de feu: courant d'air chaud
     - Easter eggs:
         - Picore poeles: bruit métallique
-        - Salles cachées (bouche d'aération, placards, trous de souris, $\ldots$)
+        - Salles cachées (bouche d'aération, placards, trous de souris, $\ldots$)\
+    ![Niveau 2](./levels/premJet/2cuisine.png)
 
     4. Jardin: Niveau "calme" + "feel good"
     - Objectifs:
@@ -224,7 +225,8 @@ Dream Team:
         - Trou de taupe: parties de niveau souterraines
         - Chat qui poursuit?
     - Easter eggs:
-        - Salles cachées (trou de taupes, $\ldots$)
+        - Salles cachées (trou de taupes, $\ldots$)\
+    ![Niveau 3](./levels/premJet/3jardin.png)
 
     5. Grenier: Niveau "lore" + difficile
     - Objectifs:
@@ -237,7 +239,8 @@ Dream Team:
         - Piques (cf niveau hôtel) (pas des araignées)
         - Lettres: Début du niveau, boite qui bascule et disperse les lettres dans le grenier
     - Easter eggs:
-        - Salles cachées (plein)
+        - Salles cachées (plein)\
+    ![Niveau 4](./levels/premJet/4grenier.png)
 
     6. Niveau final: crédits + satisfaisant
     - Mécaniques:
