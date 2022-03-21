@@ -204,7 +204,7 @@ func glide():
 	velocity.x *= facing # UNFLIP
 
 func peck():
-	
+	pass
 
 func tick_timers():
 	if coyote_timer > 0:
