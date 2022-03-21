@@ -65,6 +65,10 @@ var gliding_lift_coeff: float
 var gliding_drag_coeff: float
 
 
+func _ready():
+	Global.player = self
+
+
 func _input(event):
 	if event.is_action_pressed("left"):
 		input_direction = -1.0

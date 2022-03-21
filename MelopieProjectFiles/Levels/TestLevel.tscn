@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://LevelElements/Tiles/Wood.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actors/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://LevelElements/Tiles/Wood.gd" type="Script" id=3]
 [ext_resource path="res://MetaElements/Camera/FollowCamera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://LevelElements/Wind/Wind.tscn" type="PackedScene" id=5]
+[ext_resource path="res://LevelElements/LevelChangeTrigger/LevelChangeTrigger.tscn" type="PackedScene" id=6]
+[ext_resource path="res://LevelElements/BouncePad/BouncePad.tscn" type="PackedScene" id=7]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -46,3 +48,14 @@ scale = Vector2( 1.52, 15.92 )
 wind_strength = 5.0
 wind_direction = Vector2( 0, -1 )
 acceleration = 0.1
+
+[node name="LevelExit" parent="." instance=ExtResource( 6 )]
+position = Vector2( 760, 152 )
+next_level = "res://Levels/TestLevel.tscn"
+
+[node name="Trampoline" parent="." instance=ExtResource( 7 )]
+position = Vector2( 452, 774 )
+rotation = -3.14159
+scale = Vector2( 5, 1 )
+bounce_strength = 10.0
+bounce_direction = Vector2( 0, -1 )
