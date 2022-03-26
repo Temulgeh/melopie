@@ -48,7 +48,6 @@ const c_gliding_lift_direction_power: float = 2.5
 const c_anim_rotation_speed: float = 0.3
 
 onready var sprite := $Sprite
-onready var animation_player := $AnimationPlayer
 
 var input_direction: float
 var velocity: Vector2
@@ -64,8 +63,6 @@ var gliding: bool
 var facing: int = 1
 var gliding_lift_coeff: float
 var gliding_drag_coeff: float
-
-var animations_locked: bool = false
 
 
 func _ready():
@@ -130,6 +127,10 @@ func _physics_process(delta):
 	tick_timers()
 	
 	move_and_slide(velocity / delta, Vector2.UP)
+	for index in get_slide_count():
+		var collision=get_slide_collision(index)
+		if collision.collider is MovableBlock:
+			collision.collider.slide(-collision.normal*(c_running_speed*40))
 	if is_on_floor():
 		velocity.y = 0.0
 		coyote_timer = c_coyote_time
@@ -147,8 +148,6 @@ func jump():
 	velocity.x *= c_jump_boost
 	jump_timer = 0
 	jumping = true
-	animation_player.play("RESET")
-	animation_player.queue("Jump")
 
 
 func flap():
@@ -161,8 +160,6 @@ func flap():
 	else:
 		gliding_angle = -velocity.angle() + PIE
 	gliding_angle = fmod(gliding_angle + PIE / 2, PIE) - PIE / 2
-	animation_player.play("RESET")
-	animation_player.play("Flap")
 	# I don't remember how the above line works so I'm just gonna add that..
 #	gliding_angle = fposmod(gliding_angle, 2 * PIE)
 
@@ -203,8 +200,6 @@ func glide():
 		velocity.x *= 1.0 - c_gliding_anti_loop_of_loop
 	velocity.x *= facing # UNFLIP
 
-func peck():
-	pass
 
 func tick_timers():
 	if coyote_timer > 0:
@@ -228,11 +223,3 @@ func animate():
 			facing = sign(velocity.x)
 		sprite.scale.x = facing
 	sprite.rotation = lerp_angle(sprite.rotation, target_angle, c_anim_rotation_speed)
-
-
-func lock_animations():
-	animations_locked = true
-
-
-func unlock_animations():
-	animations_locked = false
