@@ -6,3 +6,5 @@ func _ready():
 func respawn():
 	Global.player.position.x=Global.checkpoint.x
 	Global.player.position.y=Global.checkpoint.y
+	Global.player.flapped = false
+	Global.player.velocity = Vector2.ZERO

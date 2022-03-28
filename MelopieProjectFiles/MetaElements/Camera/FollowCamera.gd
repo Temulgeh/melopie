@@ -3,7 +3,7 @@
 extends KinematicBody2D
 
 
-const MOVEMENT_AMOUNT: float = 0.05
+const MOVEMENT_AMOUNT: float = 0.03
 const GLIDING_BASE_OFFSET: Vector2 = Vector2(10.0, 10.0)
 const GLIDING_VEL_OFFSET: float = 10.0
 const WALKING_ZOOM_IN: float = 1.0
@@ -24,8 +24,12 @@ var zoom_in: float = WALKING_ZOOM_IN
 var zoom_out: float = WALKING_ZOOM_OUT
 
 
+func _ready():
+	visible = true
+
+
 func _physics_process(delta):
-	var target_position = player.global_position
+	var target_position = player.global_position + Vector2(50.0, -20.0)
 	var zoom_target: float
 	if player.gliding:
 		var flipped_offset: Vector2 = GLIDING_BASE_OFFSET
