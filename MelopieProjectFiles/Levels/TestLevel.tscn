@@ -72,3 +72,4 @@ position = Vector2( 328, 288 )
 
 [node name="Block" parent="." instance=ExtResource( 10 )]
 position = Vector2( 200, 72 )
+GRAVITY = 800.0

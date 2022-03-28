@@ -1,7 +1,7 @@
 extends KinematicBody2D
 class_name MovableBlock
 
-const GRAVITY: float = 80.0
+export var GRAVITY: float
 
 var velocity: Vector2
 
