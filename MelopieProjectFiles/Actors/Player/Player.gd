@@ -24,7 +24,7 @@ const c_gravity: float = 0.3
 const c_high_jump_gravity: float = 0.1
 const c_jump_apex_velocity: float = 0.5
 const c_jump_apex_gravity: float = c_gravity * 0.5
-const c_jump_boost: float = 1.1
+const c_jump_boost: float = 1.05
 const c_max_gravity: float = 4.7
 
 const c_flap_force: float = -3.0
@@ -51,6 +51,7 @@ const c_anim_glide_less_rotation_time: int = 30
 const c_anim_run_threshold: float = 0.1
 const c_anim_run_min_speed: float = 0.6
 const c_anim_run_max_speed: float = 1.4
+const c_anim_keep_running_every_second_you_are_not_running_they_are_getting_closer: int = 3
 
 onready var sprite := $Sprite
 onready var animation_player := $AnimationPlayer
@@ -73,6 +74,7 @@ var gliding_drag_coeff: float
 
 var animations_locked: bool = false
 var frozen: bool = false
+var oh_god_oh_no_they_are_coming: int = 0
 
 
 func _ready():
@@ -251,6 +253,17 @@ func animate():
 		if not animations_locked:
 			if is_on_floor():
 				if abs(velocity.x) > c_anim_run_threshold:
+					oh_god_oh_no_they_are_coming = c_anim_keep_running_every_second_you_are_not_running_they_are_getting_closer
+					animation_player.play("Run")
+					animation_player.playback_speed = lerp(
+						c_anim_run_min_speed,
+						c_anim_run_max_speed,
+						(abs(velocity.x) - c_anim_run_threshold) /
+						(c_running_speed - c_anim_run_threshold)
+					)
+				elif oh_god_oh_no_they_are_coming > 0:
+					oh_god_oh_no_they_are_coming -= 1
+					# very wet code
 					animation_player.play("Run")
 					animation_player.playback_speed = lerp(
 						c_anim_run_min_speed,
@@ -286,7 +299,9 @@ func unfreeze():
 
 
 func glide_animation():
-	pass
+	if not animations_locked:
+#		animation_player.play("RESET")
+		animation_player.play("Glide")
 
 
 func reset_playback_speed():
