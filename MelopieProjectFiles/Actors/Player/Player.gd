@@ -46,6 +46,8 @@ const c_gliding_nosedive: float = 0.04
 const c_gliding_anti_loop_of_loop: float = 0.05
 const c_gliding_lift_direction_power: float = 2.5
 
+const c_no_flying_allowed_time: int = 30
+
 const c_anim_rotation_speed: float = 0.3
 const c_anim_glide_less_rotation_time: int = 30
 const c_anim_run_threshold: float = 0.1
@@ -71,6 +73,7 @@ var gliding: bool
 var facing: int = 1
 var gliding_lift_coeff: float
 var gliding_drag_coeff: float
+var no_flying_allowed_uwu: int
 
 var animations_locked: bool = false
 var frozen: bool = false
@@ -170,9 +173,20 @@ func peck():
 	pass
 
 
+func bounce(force: Vector2):
+	no_flying_allowed_uwu = c_no_flying_allowed_time
+	flapped = false
+	var force_direction: Vector2 = force.normalized()
+	velocity -= force_direction.dot(velocity) * force_direction
+	velocity += force
+
+
 func movement_and_controls_and_all_that_kind_of_stuff(delta: float):
 	if flapped and Input.is_action_pressed("jump"):
-		glide()
+		if not no_flying_allowed_uwu:
+			if Input.is_action_just_pressed("jump") and input_direction != 0:
+				facing = sign(input_direction)
+			glide()
 	else:
 		gliding = false
 		var friction: float = c_ground_friction if is_on_floor() else c_air_friction
@@ -234,6 +248,8 @@ func tick_timers():
 		jump_timer += 1
 	if anim_glide_less_rotation_timer > 0:
 		anim_glide_less_rotation_timer -= 1
+	if no_flying_allowed_uwu > 0:
+		no_flying_allowed_uwu -= 1
 
 
 func animate():
